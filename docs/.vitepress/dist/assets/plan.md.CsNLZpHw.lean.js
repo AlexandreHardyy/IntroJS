@@ -1,0 +1,1 @@
+import{_ as e,o as l,c as n,ah as s}from"./chunks/framework.D70b1pOo.js";const u=JSON.parse('{"title":"Plan du Cours","description":"","frontmatter":{},"headers":[],"relativePath":"plan.md","filePath":"plan.md"}'),a={name:"plan.md"};function o(r,t,d,i,g,c){return l(),n("div",null,[...t[0]||(t[0]=[s("",3)])])}const p=e(a,[["render",o]]);export{u as __pageData,p as default};
