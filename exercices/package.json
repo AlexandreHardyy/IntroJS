@@ -1,0 +1,15 @@
+{
+  "name": "exercices-js",
+  "version": "1.0.0",
+  "description": "Exercices d'introduction à JavaScript avec tests Vitest",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": ["javascript", "exercices", "vitest"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  }
+}

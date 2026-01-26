@@ -16,7 +16,9 @@ export default defineConfig({
       {
         text: 'Partie 1 : Les Fondations',
         items: [
-          { text: 'Séance 1 : Les Bases Complètes', link: '/seance-1/' }
+          { text: 'Introduction', link: '/partie-1/introduction' },
+          { text: 'Les Bases Complètes', link: '/partie-1/bases' },
+          { text: 'Objets & Classes', link: '/partie-1/objets' }
         ]
       },
       {
