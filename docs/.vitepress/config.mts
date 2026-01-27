@@ -34,6 +34,8 @@ export default defineConfig({
           { text: 'Les Méthodes', link: '/partie-2/methodes' },
           { text: 'Membres Statiques', link: '/partie-2/statique' },
           { text: 'Héritage', link: '/partie-2/heritage' },
+          { text: 'Comparaison d\'objets', link: '/partie-2/comparaison' },
+          { text: 'Spread Operator', link: '/partie-2/spread' },
         ]
       },
     ],
