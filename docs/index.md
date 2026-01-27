@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: "Commencer le cours"
-      link: /seance-1/
+      link: /partie-1/introduction.html
     - theme: alt
       text: "Voir le plan"
       link: /plan

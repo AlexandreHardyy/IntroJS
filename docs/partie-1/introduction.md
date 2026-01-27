@@ -16,3 +16,9 @@ console.log("Prêt à coder !");
 console.warn("Ceci est un avertissement");
 console.error("Ceci est une erreur");
 ```
+
+## Quelques Exemples
+
+*   **Web 3D** : https://www.webgame.co.za/
+*   **Chat IA** : https://chat.openai.com/
+*   **Animation** : https://animejs.com/

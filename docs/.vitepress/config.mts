@@ -8,43 +8,43 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Accueil', link: '/' },
-      { text: 'Introduction', link: '/seance-1/' },
+      { text: 'Introduction', link: '/partie-1/introduction' },
       { text: 'Ressources', link: '/ressources' }
     ],
 
     sidebar: [
       {
-        text: 'Partie 1 : Les Fondations',
+        text: 'Les Fondations du langage',
         items: [
           { text: 'Introduction', link: '/partie-1/introduction' },
           { text: 'Les Bases Complètes', link: '/partie-1/bases' },
-          { text: 'Objets & Classes', link: '/partie-1/objets' }
+          { text: 'Méthodes & Fonctionnel', link: '/partie-1/methodes-concept-fonctionnel' },
+          { text: 'Environnement & Outils', link: '/partie-1/environnement' },
+          { text: 'Modules & Import/Export', link: '/partie-1/modules' },
         ]
       },
       {
-        text: 'Partie 2 : Le Web Interactif',
+        text: 'La programmation orientée objet',
         items: [
-          { text: 'Séance 4 : Le DOM', link: '/seance-4/' },
-          { text: 'Séance 5 : Événements', link: '/seance-5/' }
+          { text: 'Introduction', link: '/partie-2/introduction' },
+          { text: 'Comprendre les prototypes', link: '/partie-2/prototypes' },
+          { text: 'Les Classes', link: '/partie-2/classes' },
+          { text: 'Le Constructor', link: '/partie-2/constructor' },
+          { text: 'Les Propriétés', link: '/partie-2/proprietes' },
+          { text: 'Les Méthodes', link: '/partie-2/methodes' },
+          { text: 'Membres Statiques', link: '/partie-2/statique' },
+          { text: 'Héritage', link: '/partie-2/heritage' },
         ]
       },
-      {
-        text: 'Partie 3 : Asynchronisme & Application',
-        items: [
-          { text: 'Séance 6 : Asynchronisme', link: '/seance-6/' },
-          { text: 'Séance 7 : JS Moderne & Stockage', link: '/seance-7/' },
-          { text: 'Séance 8 : Projet Final', link: '/seance-8/' }
-        ]
-      }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' } 
+      { icon: 'github', link: 'https://github.com/AlexandreHardyy/IntroJS' } 
     ],
     
     footer: {
-      message: 'Support de cours pour 2ème Année.',
-      copyright: 'Copyright © 2024 Alexandre Hardy'
+      message: 'Support de cours pour 2ème Année JS.',
+      copyright: 'Copyright © 2026 Alexandre Hardy'
     }
   }
 })
