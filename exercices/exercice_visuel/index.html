@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Magasin Galactique - Exercice JS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orb"></div>
+    <div class="background-orb orb-2"></div>
+    
+    <div class="container">
+        <header>
+            <h1>MAGASIN <span class="highlight">GALACTIQUE</span></h1>
+            <p>Le futur du shopping, propulsé par votre code.</p>
+        </header>
+
+        <main>
+            <section class="products-section">
+                <h2>📦 Catalogue</h2>
+                <div id="products-grid" class="grid">
+                    <!-- Les produits seront générés par JS -->
+                </div>
+            </section>
+
+            <section class="cart-section">
+                <div class="cart-card">
+                    <div class="cart-header">
+                        <h2>🛒 Votre Panier</h2>
+                        <button id="clear-btn" class="btn btn-danger">Vider</button>
+                    </div>
+                    
+                    <div id="cart-items" class="cart-items-container">
+                        <p class="empty-msg">Votre panier est vide...</p>
+                        <!-- Les items du panier apparaîtront ici -->
+                    </div>
+
+                    <div class="cart-footer">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span id="total-price" class="price">0 💎</span>
+                        </div>
+                        <div id="promo-status" class="promo-badge hidden">
+                            PROMO ACTIVÉE
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="console-log-visual">
+                    <h3>🖥️ Console Log Visuel</h3>
+                    <div id="console-output">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- engine.js est le point d'entrée, il importe logic.js et style.css -->
+    <script type="module" src="engine.js"></script>
+</body>
+</html>
