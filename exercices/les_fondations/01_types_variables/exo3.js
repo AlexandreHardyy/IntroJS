@@ -6,5 +6,5 @@
 
 export function estMajeur(age) {
     // Écrivez votre code ici
-    return false;
+    return null;
 }

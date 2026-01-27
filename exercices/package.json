@@ -6,7 +6,11 @@
   "scripts": {
     "test": "vitest"
   },
-  "keywords": ["javascript", "exercices", "vitest"],
+  "keywords": [
+    "javascript",
+    "exercices",
+    "vitest"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
