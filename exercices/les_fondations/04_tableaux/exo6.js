@@ -7,5 +7,5 @@
 
 export function trierTableau(tab) {
     // Écrivez votre code ici
-    return [];
+    return null;
 }

@@ -6,5 +6,5 @@
 
 export function moyenneTableau(tab) {
     // Écrivez votre code ici
-    return 0;
+    return null;
 }

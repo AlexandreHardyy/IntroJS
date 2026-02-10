@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { compterMots, extraireExtension, nettoyerEmail } from '../../06_methodes_fonctionnel/exo1';
-import { doublerNombres, nomsUtilisateurs } from '../../06_methodes_fonctionnel/exo2';
-import { nombresPairs, produitsPasChers } from '../../06_methodes_fonctionnel/exo3';
-import { calculerSomme, trouverUtilisateurParId } from '../../06_methodes_fonctionnel/exo4';
+import { compterMots, extraireExtension, nettoyerEmail } from '../../05_methodes_fonctionnel/exo1';
+import { doublerNombres, nomsUtilisateurs } from '../../05_methodes_fonctionnel/exo2';
+import { nombresPairs, produitsPasChers } from '../../05_methodes_fonctionnel/exo3';
+import { calculerSomme, trouverUtilisateurParId } from '../../05_methodes_fonctionnel/exo4';
 
 describe('06_methodes_fonctionnel', () => {
 
@@ -14,8 +14,8 @@ describe('06_methodes_fonctionnel', () => {
         });
 
         it('nettoyerEmail doit retirer les espaces et mettre en minuscule', () => {
-             expect(nettoyerEmail("  Bob@Email.com ")).toBe("bob@email.com");
-             expect(nettoyerEmail("ALICE@GMAIL.COM")).toBe("alice@gmail.com");
+            expect(nettoyerEmail("  Bob@Email.com ")).toBe("bob@email.com");
+            expect(nettoyerEmail("ALICE@GMAIL.COM")).toBe("alice@gmail.com");
         });
 
         it('compterMots doit retourner le nombre de mots', () => {
