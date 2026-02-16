@@ -38,6 +38,18 @@ export default defineConfig({
           { text: 'Spread Operator', link: '/partie-2/spread' },
         ]
       },
+      {
+        text: 'Manipulation du DOM',
+        items: [
+          { text: 'Introduction au DOM', link: '/partie-3/introduction' },
+          { text: 'Sélectionner des éléments', link: '/partie-3/selectionner' },
+          { text: 'Modifier des éléments', link: '/partie-3/modifier' },
+          { text: 'Créer et supprimer', link: '/partie-3/creer-supprimer' },
+          { text: 'Les événements', link: '/partie-3/evenements' },
+          { text: 'Formulaires', link: '/partie-3/formulaires' },
+          { text: 'Traverser le DOM', link: '/partie-3/traverser-dom' },
+        ]
+      },
     ],
 
     socialLinks: [
