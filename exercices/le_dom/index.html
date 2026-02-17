@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinéCollect — Ma Collection de Films</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER                                       -->
+    <!-- ============================================ -->
+    <header class="header">
+        <div class="header__left">
+            <h1 class="header__title">🎬 CinéCollect</h1>
+            <span class="header__subtitle">Ma collection personnelle</span>
+        </div>
+        <div class="header__right">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-bar__input" 
+                    placeholder="Rechercher un film..."
+                >
+                <span class="search-bar__icon">🔍</span>
+            </div>
+            <button id="btn-dark-mode" class="btn btn--icon" title="Mode sombre">
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- BARRE DE STATISTIQUES                        -->
+    <!-- ============================================ -->
+    <section class="stats-bar">
+        <div class="stat">
+            <span class="stat__value" id="stat-total">0</span>
+            <span class="stat__label">Films</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" id="stat-note-moyenne">—</span>
+            <span class="stat__label">Note moyenne</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" id="stat-favoris">0</span>
+            <span class="stat__label">Favoris</span>
+        </div>
+        <div class="stat">
+            <span class="stat__value" id="stat-recents">0</span>
+            <span class="stat__label">Depuis 2020</span>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FORMULAIRE D'AJOUT                           -->
+    <!-- ============================================ -->
+    <section class="form-section">
+        <h2 class="form-section__title">Ajouter un film</h2>
+        <form id="form-ajout" class="form" novalidate>
+            <div class="form__group">
+                <label for="film-titre" class="form__label">Titre *</label>
+                <input type="text" id="film-titre" class="form__input" placeholder="Ex : Inception" required minlength="1">
+                <span class="form__error" id="error-titre"></span>
+            </div>
+            <div class="form__group">
+                <label for="film-realisateur" class="form__label">Réalisateur *</label>
+                <input type="text" id="film-realisateur" class="form__input" placeholder="Ex : Christopher Nolan" required>
+                <span class="form__error" id="error-realisateur"></span>
+            </div>
+            <div class="form__group">
+                <label for="film-annee" class="form__label">Année *</label>
+                <input type="number" id="film-annee" class="form__input" placeholder="Ex : 2010" min="1895" max="2030" required>
+                <span class="form__error" id="error-annee"></span>
+            </div>
+            <div class="form__group">
+                <label for="film-genre" class="form__label">Genre</label>
+                <select id="film-genre" class="form__select">
+                    <option value="action">Action</option>
+                    <option value="comedie">Comédie</option>
+                    <option value="drame">Drame</option>
+                    <option value="horreur">Horreur</option>
+                    <option value="sf">Science-Fiction</option>
+                    <option value="animation">Animation</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="documentaire">Documentaire</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label class="form__label">Note (sur 5)</label>
+                <div class="rating" id="rating-input">
+                    <span class="rating__star" data-value="1">☆</span>
+                    <span class="rating__star" data-value="2">☆</span>
+                    <span class="rating__star" data-value="3">☆</span>
+                    <span class="rating__star" data-value="4">☆</span>
+                    <span class="rating__star" data-value="5">☆</span>
+                </div>
+                <input type="hidden" id="film-note" value="0">
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+                ➕ Ajouter à ma collection
+            </button>
+        </form>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- BARRE DE FILTRES ET TRI                      -->
+    <!-- ============================================ -->
+    <section class="filters-section">
+        <div class="filters">
+            <span class="filters__label">Filtrer :</span>
+            <button class="filter-btn filter-btn--active" data-genre="tous">Tous</button>
+            <button class="filter-btn" data-genre="action">Action</button>
+            <button class="filter-btn" data-genre="comedie">Comédie</button>
+            <button class="filter-btn" data-genre="drame">Drame</button>
+            <button class="filter-btn" data-genre="horreur">Horreur</button>
+            <button class="filter-btn" data-genre="sf">Sci-Fi</button>
+            <button class="filter-btn" data-genre="animation">Animation</button>
+            <button class="filter-btn" data-genre="thriller">Thriller</button>
+            <button class="filter-btn" data-genre="documentaire">Docu</button>
+        </div>
+        <div class="sort">
+            <label for="tri-select" class="sort__label">Trier par :</label>
+            <select id="tri-select" class="form__select form__select--small">
+                <option value="date-ajout">Date d'ajout</option>
+                <option value="titre-az">Titre (A→Z)</option>
+                <option value="titre-za">Titre (Z→A)</option>
+                <option value="annee-asc">Année (anciens)</option>
+                <option value="annee-desc">Année (récents)</option>
+                <option value="note-desc">Meilleure note</option>
+                <option value="note-asc">Moins bonne note</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- GRILLE DE FILMS                              -->
+    <!-- ============================================ -->
+    <main class="films-container">
+        <div id="films-grid" class="films-grid">
+            <!-- Les cartes de films seront ajoutées ici par JavaScript -->
+        </div>
+        <div id="empty-state" class="empty-state">
+            <span class="empty-state__icon">🎞️</span>
+            <p class="empty-state__text">Votre collection est vide !</p>
+            <p class="empty-state__sub">Ajoutez votre premier film via le formulaire ci-dessus.</p>
+        </div>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- MODALE D'ÉDITION                             -->
+    <!-- ============================================ -->
+    <div id="modal-overlay" class="modal-overlay" hidden>
+        <div class="modal">
+            <div class="modal__header">
+                <h3 class="modal__title">Modifier le film</h3>
+                <button id="modal-close" class="btn btn--icon modal__close">✕</button>
+            </div>
+            <form id="form-edit" class="form">
+                <input type="hidden" id="edit-id">
+                <div class="form__group">
+                    <label for="edit-titre" class="form__label">Titre</label>
+                    <input type="text" id="edit-titre" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="edit-realisateur" class="form__label">Réalisateur</label>
+                    <input type="text" id="edit-realisateur" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="edit-annee" class="form__label">Année</label>
+                    <input type="number" id="edit-annee" class="form__input" min="1895" max="2030" required>
+                </div>
+                <div class="form__group">
+                    <label for="edit-genre" class="form__label">Genre</label>
+                    <select id="edit-genre" class="form__select">
+                        <option value="action">Action</option>
+                        <option value="comedie">Comédie</option>
+                        <option value="drame">Drame</option>
+                        <option value="horreur">Horreur</option>
+                        <option value="sf">Science-Fiction</option>
+                        <option value="animation">Animation</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="documentaire">Documentaire</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Note</label>
+                    <div class="rating" id="edit-rating">
+                        <span class="rating__star" data-value="1">☆</span>
+                        <span class="rating__star" data-value="2">☆</span>
+                        <span class="rating__star" data-value="3">☆</span>
+                        <span class="rating__star" data-value="4">☆</span>
+                        <span class="rating__star" data-value="5">☆</span>
+                    </div>
+                    <input type="hidden" id="edit-note" value="0">
+                </div>
+                <div class="form__actions">
+                    <button type="button" id="modal-cancel" class="btn btn--secondary">Annuler</button>
+                    <button type="submit" class="btn btn--primary">💾 Sauvegarder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- NOTIFICATION TOAST                           -->
+    <!-- ============================================ -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <p>CinéCollect — Exercice DOM JavaScript — <kbd>?</kbd> pour les raccourcis clavier</p>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- AIDE RACCOURCIS CLAVIER                      -->
+    <!-- ============================================ -->
+    <div id="shortcuts-overlay" class="modal-overlay" hidden>
+        <div class="modal modal--small">
+            <div class="modal__header">
+                <h3 class="modal__title">⌨️ Raccourcis clavier</h3>
+                <button id="shortcuts-close" class="btn btn--icon modal__close">✕</button>
+            </div>
+            <div class="shortcuts-list">
+                <div class="shortcut"><kbd>N</kbd> <span>Nouveau film (focus formulaire)</span></div>
+                <div class="shortcut"><kbd>/</kbd> <span>Rechercher</span></div>
+                <div class="shortcut"><kbd>D</kbd> <span>Mode sombre</span></div>
+                <div class="shortcut"><kbd>Échap</kbd> <span>Fermer une modale</span></div>
+                <div class="shortcut"><kbd>?</kbd> <span>Afficher cette aide</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
