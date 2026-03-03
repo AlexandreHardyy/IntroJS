@@ -50,6 +50,46 @@ export default defineConfig({
           { text: 'Traverser le DOM', link: '/partie-3/traverser-dom' },
         ]
       },
+      {
+        text: 'NPM et Outils de build',
+        items: [
+          { text: 'Introduction à NPM & Vite', link: '/partie-4/introduction' },
+          { text: 'Installer un package', link: '/partie-4/installer-package' },
+          { text: 'Les commandes utiles', link: '/partie-4/commandes-utiles' },
+          { text: 'Le package.json', link: '/partie-4/package-json' },
+        ]
+      },
+      {
+        text: 'Gestion d\'erreur',
+        items: [
+          { text: 'Introduction', link: '/partie-5/introduction' },
+          { text: 'Lancer des erreurs (throw)', link: '/partie-5/throw-custom' },
+        ]
+      },
+      {
+        text: 'Asynchronisme',
+        items: [
+          { text: 'Introduction', link: '/partie-6/introduction' },
+          { text: 'setTimeout & setInterval', link: '/partie-6/timers' },
+          { text: 'Les Promises', link: '/partie-6/promesses' },
+          { text: 'Async / Await', link: '/partie-6/async-await' },
+        ]
+      },
+      {
+        text: 'Fetch et Consommation d\'API',
+        items: [
+          { text: 'Introduction à Fetch', link: '/partie-7/introduction' },
+          { text: 'Les Méthodes HTTP', link: '/partie-7/methodes-http' },
+          { text: 'Traitement JSON', link: '/partie-7/manipulation-json' },
+        ]
+      },
+      {
+        text: 'Les APIs Web',
+        items: [
+          { text: 'Web Storage', link: '/partie-8/localstorage' },
+          { text: 'Autres APIs', link: '/partie-8/autres-apis' },
+        ]
+      },
     ],
 
     socialLinks: [
